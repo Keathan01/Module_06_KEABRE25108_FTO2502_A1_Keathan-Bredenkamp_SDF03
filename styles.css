@@ -20,7 +20,8 @@ body {
 
 img {
     display: block;
-   
+    width: 300px;
+    height: 300px;
 }
 
 .profile img:nth-of-type(1){
@@ -29,5 +30,4 @@ width: 300px;
 height: 300px;
 border-radius: 50%;
 border: 10px solid rgb(28, 78, 28) ;
-
 }
