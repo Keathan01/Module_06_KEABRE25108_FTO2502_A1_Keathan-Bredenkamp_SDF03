@@ -8,6 +8,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+   
 }
 
 body {
@@ -16,18 +17,100 @@ body {
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
+    margin: 100px;
 }
 
 img {
     display: block;
+    width: 280px;
+    height: 350px;
+    object-fit: fill;
+}
+.profile img:nth-of-type(1){
+    object-fit:cover;
     width: 300px;
     height: 300px;
+    border-radius: 50%;
+    border: 10px solid rgb(28, 78, 28) ;
+    margin-left: 50px;
+ 
+}
+.profile{
+    display: flex;
+}
+button{
+    cursor: pointer;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 70px;
+    margin-right: 70px;
+    padding:100px;
+    gap: 30px;
 }
 
-.profile img:nth-of-type(1){
- object-fit:cover;
-width: 300px;
-height: 300px;
-border-radius: 50%;
-border: 10px solid rgb(28, 78, 28) ;
+.profile-user-name{
+    display: inline;
+
+}
+li{
+    display: inline;
+}
+
+
+.visually-hidden{
+    visibility: hidden;
+    font-size: 3px;
+    }
+    
+
+
+.gallery-item{
+    position: relative;
+    color: #fafafa;
+    cursor: pointer;
+    
+
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus,.gallery-item-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0;
+    width: 80%;
+    height: 100%;
+    
+
+   
+}
+.gallery-item-info {
+display: none;
+
+
+}
+
+.loader{
+   border: 4px solid lightgray;
+   border-top: 4px solid rgb(28, 78, 28);
+   border-left: 4px solid rgb(28, 78, 28);
+   border-bottom: 4px solid rgb(28, 78, 28);
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   animation: spin 400ms linear infinite;
+   margin-left: auto;
+   margin-right: auto;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        
+}
+100%{
+    transform: rotate(360deg);
+}
 }
